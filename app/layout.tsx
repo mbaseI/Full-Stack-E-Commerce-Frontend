@@ -8,6 +8,7 @@ import ModalProvider from "@/providers/modal-provider"
 import { Urbanist } from "next/font/google"
 
 import "./globals.css"
+import ToastProvider from "@/providers/toast-provider"
 
 const font = Urbanist({ subsets: ["latin"] })
 
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ModalProvider />
+        <ToastProvider />
         <Navbar />
         {children}
         <Footer />
